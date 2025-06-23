@@ -1,0 +1,138 @@
+/* Medicine Website Custom Styles */
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 500px;
+}
+
+.hero-icon {
+  font-size: 8rem;
+  opacity: 0.8;
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Search Section */
+.search-section {
+  background-color: #f8f9fa;
+}
+
+/* Category Cards */
+.category-card {
+  background: white;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid #e9ecef;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Medicine Cards */
+.medicine-card {
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.medicine-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.medicine-image {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Feature Cards */
+.feature-card {
+  background: white;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* Filters */
+.filter-group h6 {
+  color: #495057;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* Footer */
+.footer {
+  background-color: #212529 !important;
+}
+
+.footer a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #fff !important;
+}
+
+.social-links a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-icon {
+    font-size: 4rem;
+  }
+  
+  .display-4 {
+    font-size: 2rem;
+  }
+  
+  .btn-lg {
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5a67d8;
+}

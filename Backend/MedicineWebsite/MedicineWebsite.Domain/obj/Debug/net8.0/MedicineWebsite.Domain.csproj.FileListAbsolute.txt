@@ -1,0 +1,13 @@
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Domain/bin/Debug/net8.0/MedicineWebsite.Domain.deps.json
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Domain/bin/Debug/net8.0/MedicineWebsite.Domain.dll
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Domain/bin/Debug/net8.0/MedicineWebsite.Domain.pdb
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Domain/obj/Debug/net8.0/MedicineWebsite.Domain.csproj.AssemblyReference.cache
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Domain/obj/Debug/net8.0/MedicineWebsite.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Domain/obj/Debug/net8.0/MedicineWebsite.Domain.AssemblyInfoInputs.cache
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Domain/obj/Debug/net8.0/MedicineWebsite.Domain.AssemblyInfo.cs
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Domain/obj/Debug/net8.0/MedicineWebsite.Domain.csproj.CoreCompileInputs.cache
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Domain/obj/Debug/net8.0/MedicineWebsite.Domain.sourcelink.json
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Domain/obj/Debug/net8.0/MedicineWebsite.Domain.dll
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Domain/obj/Debug/net8.0/refint/MedicineWebsite.Domain.dll
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Domain/obj/Debug/net8.0/MedicineWebsite.Domain.pdb
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Domain/obj/Debug/net8.0/ref/MedicineWebsite.Domain.dll

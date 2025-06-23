@@ -1,0 +1,12 @@
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Shared/bin/Debug/net8.0/MedicineWebsite.Shared.deps.json
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Shared/bin/Debug/net8.0/MedicineWebsite.Shared.dll
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Shared/bin/Debug/net8.0/MedicineWebsite.Shared.pdb
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Shared/obj/Debug/net8.0/MedicineWebsite.Shared.GeneratedMSBuildEditorConfig.editorconfig
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Shared/obj/Debug/net8.0/MedicineWebsite.Shared.AssemblyInfoInputs.cache
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Shared/obj/Debug/net8.0/MedicineWebsite.Shared.AssemblyInfo.cs
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Shared/obj/Debug/net8.0/MedicineWebsite.Shared.csproj.CoreCompileInputs.cache
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Shared/obj/Debug/net8.0/MedicineWebsite.Shared.sourcelink.json
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Shared/obj/Debug/net8.0/MedicineWebsite.Shared.dll
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Shared/obj/Debug/net8.0/refint/MedicineWebsite.Shared.dll
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Shared/obj/Debug/net8.0/MedicineWebsite.Shared.pdb
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Shared/obj/Debug/net8.0/ref/MedicineWebsite.Shared.dll

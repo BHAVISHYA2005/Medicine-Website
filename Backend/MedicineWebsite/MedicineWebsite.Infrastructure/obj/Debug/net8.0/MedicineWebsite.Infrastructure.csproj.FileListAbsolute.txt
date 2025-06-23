@@ -1,0 +1,12 @@
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Infrastructure/bin/Debug/net8.0/MedicineWebsite.Infrastructure.deps.json
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Infrastructure/bin/Debug/net8.0/MedicineWebsite.Infrastructure.dll
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Infrastructure/bin/Debug/net8.0/MedicineWebsite.Infrastructure.pdb
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Infrastructure/obj/Debug/net8.0/MedicineWebsite.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Infrastructure/obj/Debug/net8.0/MedicineWebsite.Infrastructure.AssemblyInfoInputs.cache
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Infrastructure/obj/Debug/net8.0/MedicineWebsite.Infrastructure.AssemblyInfo.cs
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Infrastructure/obj/Debug/net8.0/MedicineWebsite.Infrastructure.csproj.CoreCompileInputs.cache
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Infrastructure/obj/Debug/net8.0/MedicineWebsite.Infrastructure.sourcelink.json
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Infrastructure/obj/Debug/net8.0/MedicineWebsite.Infrastructure.dll
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Infrastructure/obj/Debug/net8.0/refint/MedicineWebsite.Infrastructure.dll
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Infrastructure/obj/Debug/net8.0/MedicineWebsite.Infrastructure.pdb
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Infrastructure/obj/Debug/net8.0/ref/MedicineWebsite.Infrastructure.dll

@@ -25,6 +25,135 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Domain/MedicineWebsite.Domain.csproj": {
+                "projectPath": "/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Domain/MedicineWebsite.Domain.csproj"
+              },
+              "/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Shared/MedicineWebsite.Shared.csproj": {
+                "projectPath": "/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Shared/MedicineWebsite.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/256/sdk/8.0.407/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Domain/MedicineWebsite.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Domain/MedicineWebsite.Domain.csproj",
+        "projectName": "MedicineWebsite.Domain",
+        "projectPath": "/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Domain/MedicineWebsite.Domain.csproj",
+        "packagesPath": "/home/bhavishya/.nuget/packages/",
+        "outputPath": "/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/bhavishya/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/256/sdk/8.0.407/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Shared/MedicineWebsite.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Shared/MedicineWebsite.Shared.csproj",
+        "projectName": "MedicineWebsite.Shared",
+        "projectPath": "/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Shared/MedicineWebsite.Shared.csproj",
+        "packagesPath": "/home/bhavishya/.nuget/packages/",
+        "outputPath": "/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Shared/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/bhavishya/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },

@@ -619,6 +619,24 @@
           "build/net8.0/Microsoft.EntityFrameworkCore.Design.props": {}
         }
       },
+      "Microsoft.EntityFrameworkCore.InMemory/9.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "9.0.6",
+          "Microsoft.Extensions.Caching.Memory": "9.0.6",
+          "Microsoft.Extensions.Logging": "9.0.6"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/9.0.6": {
         "type": "package",
         "dependencies": {
@@ -1750,6 +1768,68 @@
             "assetType": "runtime",
             "rid": "win"
           }
+        }
+      },
+      "MedicineWebsite.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "MedicineWebsite.Domain": "1.0.0",
+          "MedicineWebsite.Shared": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MedicineWebsite.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MedicineWebsite.Application.dll": {}
+        }
+      },
+      "MedicineWebsite.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.6"
+        },
+        "compile": {
+          "bin/placeholder/MedicineWebsite.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MedicineWebsite.Domain.dll": {}
+        }
+      },
+      "MedicineWebsite.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/MedicineWebsite.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MedicineWebsite.Infrastructure.dll": {}
+        }
+      },
+      "MedicineWebsite.Persistence/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "MedicineWebsite.Application": "1.0.0",
+          "MedicineWebsite.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.6"
+        },
+        "compile": {
+          "bin/placeholder/MedicineWebsite.Persistence.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MedicineWebsite.Persistence.dll": {}
+        }
+      },
+      "MedicineWebsite.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/MedicineWebsite.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MedicineWebsite.Shared.dll": {}
         }
       }
     }
@@ -3012,6 +3092,21 @@
         "lib/net8.0/Microsoft.EntityFrameworkCore.Design.xml",
         "microsoft.entityframeworkcore.design.9.0.6.nupkg.sha512",
         "microsoft.entityframeworkcore.design.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.InMemory/9.0.6": {
+      "sha512": "y7cpyB/aYVi4VZiVoUcIA2vQLlypQv1wGmly47RwXvPX15S15mooBsxyVmw3BShBXbdnK5wxfslihIoXzplnGg==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.inmemory/9.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll",
+        "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.xml",
+        "microsoft.entityframeworkcore.inmemory.9.0.6.nupkg.sha512",
+        "microsoft.entityframeworkcore.inmemory.nuspec"
       ]
     },
     "Microsoft.EntityFrameworkCore.Relational/9.0.6": {
@@ -5073,13 +5168,43 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "MedicineWebsite.Application/1.0.0": {
+      "type": "project",
+      "path": "../MedicineWebsite.Application/MedicineWebsite.Application.csproj",
+      "msbuildProject": "../MedicineWebsite.Application/MedicineWebsite.Application.csproj"
+    },
+    "MedicineWebsite.Domain/1.0.0": {
+      "type": "project",
+      "path": "../MedicineWebsite.Domain/MedicineWebsite.Domain.csproj",
+      "msbuildProject": "../MedicineWebsite.Domain/MedicineWebsite.Domain.csproj"
+    },
+    "MedicineWebsite.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../MedicineWebsite.Infrastructure/MedicineWebsite.Infrastructure.csproj",
+      "msbuildProject": "../MedicineWebsite.Infrastructure/MedicineWebsite.Infrastructure.csproj"
+    },
+    "MedicineWebsite.Persistence/1.0.0": {
+      "type": "project",
+      "path": "../MedicineWebsite.Persistence/MedicineWebsite.Persistence.csproj",
+      "msbuildProject": "../MedicineWebsite.Persistence/MedicineWebsite.Persistence.csproj"
+    },
+    "MedicineWebsite.Shared/1.0.0": {
+      "type": "project",
+      "path": "../MedicineWebsite.Shared/MedicineWebsite.Shared.csproj",
+      "msbuildProject": "../MedicineWebsite.Shared/MedicineWebsite.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "MedicineWebsite.Application >= 1.0.0",
+      "MedicineWebsite.Infrastructure >= 1.0.0",
+      "MedicineWebsite.Persistence >= 1.0.0",
+      "MedicineWebsite.Shared >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.6",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.6",
       "Microsoft.AspNetCore.OpenApi >= 8.0.14",
+      "Microsoft.EntityFrameworkCore.InMemory >= 9.0.6",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.6",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.6",
       "Swashbuckle.AspNetCore >= 6.6.2"
@@ -5109,7 +5234,20 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Application/MedicineWebsite.Application.csproj": {
+              "projectPath": "/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Application/MedicineWebsite.Application.csproj"
+            },
+            "/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Infrastructure/MedicineWebsite.Infrastructure.csproj": {
+              "projectPath": "/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Infrastructure/MedicineWebsite.Infrastructure.csproj"
+            },
+            "/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Persistence/MedicineWebsite.Persistence.csproj": {
+              "projectPath": "/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Persistence/MedicineWebsite.Persistence.csproj"
+            },
+            "/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Shared/MedicineWebsite.Shared.csproj": {
+              "projectPath": "/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.Shared/MedicineWebsite.Shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -5138,6 +5276,10 @@
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[8.0.14, )"
+          },
+          "Microsoft.EntityFrameworkCore.InMemory": {
+            "target": "Package",
+            "version": "[9.0.6, )"
           },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",

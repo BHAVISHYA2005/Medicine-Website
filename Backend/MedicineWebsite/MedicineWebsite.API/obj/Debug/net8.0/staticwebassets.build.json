@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "1wRxVAQdH6IrxgNDtHP1jmzK8aSYSbEFex9jn7BWm1E=",
+  "Source": "MedicineWebsite.API",
+  "BasePath": "_content/MedicineWebsite.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
