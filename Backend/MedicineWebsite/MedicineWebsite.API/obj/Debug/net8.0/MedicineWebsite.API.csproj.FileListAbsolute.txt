@@ -184,3 +184,4 @@
 /home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.API/obj/Debug/net8.0/MedicineWebsite.API.pdb
 /home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.API/obj/Debug/net8.0/MedicineWebsite.API.genruntimeconfig.cache
 /home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.API/obj/Debug/net8.0/ref/MedicineWebsite.API.dll
+/home/bhavishya/Desktop/fake projects /Medicine-website/Backend/MedicineWebsite/MedicineWebsite.API/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll

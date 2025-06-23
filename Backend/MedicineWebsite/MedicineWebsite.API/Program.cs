@@ -141,170 +141,32 @@ app.MapControllers();
 using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-    SeedData(context);
-}
-
-app.Run();
-
-// Seed data method
-static void SeedData(ApplicationDbContext context)
-{
+    
+    // Ensure database is created
+    context.Database.EnsureCreated();
+    
+    // Simple seed data
     if (!context.Medicines.Any())
-    {        var medicines = new List<Medicine>
+    {
+        var medicine1 = new Medicine
         {
-            new Medicine
-            {
-                Name = "Paracetamol 500mg",
-                GenericName = "Acetaminophen",
-                Description = "Pain reliever and fever reducer",
-                DrugClass = "Analgesic",
-                Manufacturer = "Generic Pharma",
-                Strength = "500mg",
-                DosageForm = "Tablet",
-                ActiveIngredients = "Acetaminophen 500mg",
-                IsPrescriptionRequired = false,
-                CreatedAt = DateTime.UtcNow,
-                UpdatedAt = DateTime.UtcNow,
-                IsActive = true
-            },
-            new Medicine
-            {
-                Name = "Ibuprofen 400mg",
-                GenericName = "Ibuprofen",
-                Description = "Anti-inflammatory pain reliever",
-                DrugClass = "NSAID",
-                Manufacturer = "MediCare",
-                Strength = "400mg",
-                DosageForm = "Tablet",
-                ActiveIngredients = "Ibuprofen 400mg",
-                IsPrescriptionRequired = false,
-                CreatedAt = DateTime.UtcNow,
-                UpdatedAt = DateTime.UtcNow,
-                IsActive = true
-            },
-            new Medicine
-            {
-                Name = "Vitamin D3 1000IU",
-                GenericName = "Cholecalciferol",
-                Description = "Essential vitamin supplement",
-                DrugClass = "Vitamin",
-                Manufacturer = "Health Plus",
-                Strength = "1000IU",
-                DosageForm = "Capsule",
-                ActiveIngredients = "Cholecalciferol 1000IU",
-                IsPrescriptionRequired = false,
-                CreatedAt = DateTime.UtcNow,
-                UpdatedAt = DateTime.UtcNow,
-                IsActive = true
-            },
-            new Medicine
-            {
-                Name = "Amoxicillin 500mg",
-                GenericName = "Amoxicillin",
-                Description = "Antibiotic for bacterial infections",
-                DrugClass = "Antibiotic",
-                Manufacturer = "Generic Pharma",
-                Strength = "500mg",
-                DosageForm = "Capsule",
-                ActiveIngredients = "Amoxicillin 500mg",
-                IsPrescriptionRequired = true,
-                CreatedAt = DateTime.UtcNow,
-                UpdatedAt = DateTime.UtcNow,
-                IsActive = true
-            },
-            new Medicine
-            {
-                Name = "Aspirin 100mg",
-                GenericName = "Acetylsalicylic Acid",
-                Description = "Low-dose aspirin for heart health",
-                DrugClass = "Antiplatelet",
-                Manufacturer = "CardioMed",
-                Strength = "100mg",
-                DosageForm = "Tablet",
-                ActiveIngredients = "Acetylsalicylic Acid 100mg",
-                IsPrescriptionRequired = false,
-                CreatedAt = DateTime.UtcNow,
-                UpdatedAt = DateTime.UtcNow,
-                IsActive = true
-            }
+            Name = "Paracetamol 500mg",
+            GenericName = "Acetaminophen",
+            Description = "Pain reliever and fever reducer",
+            DrugClass = "Analgesic",
+            Manufacturer = "Generic Pharma",
+            Strength = "500mg",
+            DosageForm = "Tablet",
+            ActiveIngredients = "Acetaminophen 500mg",
+            IsPrescriptionRequired = false,
+            CreatedAt = DateTime.UtcNow,
+            UpdatedAt = DateTime.UtcNow,
+            IsActive = true
         };
-
-        context.Medicines.AddRange(medicines);
-        context.SaveChanges();
-
-        // Add some pharmacies        var pharmacies = new List<Pharmacy>
-        {
-            new Pharmacy
-            {
-                Name = "HealthPlus Pharmacy",
-                Address = "123 Main Street",
-                City = "New York",
-                State = "NY",
-                PostalCode = "10001",
-                Country = "USA",
-                PhoneNumber = "+1 (555) 123-4567",
-                Email = "info@healthplus.com",
-                Latitude = 40.7128,
-                Longitude = -74.0060,
-                OpeningTime = new TimeSpan(8, 0, 0),
-                ClosingTime = new TimeSpan(20, 0, 0),
-                IsOpen24Hours = false,
-                WorkingDays = "[\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\",\"Saturday\"]",
-                DeliveryFee = 5.99m,
-                MinimumOrderAmount = 25.00m,
-                IsActive = true,
-                CreatedAt = DateTime.UtcNow,
-                UpdatedAt = DateTime.UtcNow
-            },
-            new Pharmacy
-            {
-                Name = "MediCare Pharmacy",
-                Address = "456 Oak Avenue",
-                City = "New York",
-                State = "NY",
-                PostalCode = "10002",
-                Country = "USA",
-                PhoneNumber = "+1 (555) 987-6543",
-                Email = "contact@medicare.com",
-                Latitude = 40.7589,
-                Longitude = -73.9851,
-                OpeningTime = new TimeSpan(9, 0, 0),
-                ClosingTime = new TimeSpan(22, 0, 0),
-                IsOpen24Hours = false,
-                WorkingDays = "[\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\",\"Saturday\",\"Sunday\"]",
-                DeliveryFee = 4.99m,
-                MinimumOrderAmount = 20.00m,
-                IsActive = true,
-                CreatedAt = DateTime.UtcNow,
-                UpdatedAt = DateTime.UtcNow
-            }
-        };
-
-        context.Pharmacies.AddRange(pharmacies);
-        context.SaveChanges();
-
-        // Add pharmacy medicines with prices
-        var pharmacyMedicines = new List<PharmacyMedicine>();
-        var medicinesList = context.Medicines.ToList();
-        var pharmaciesList = context.Pharmacies.ToList();        foreach (var pharmacy in pharmaciesList)
-        {
-            foreach (var medicine in medicinesList)
-            {
-                pharmacyMedicines.Add(new PharmacyMedicine
-                {
-                    PharmacyId = pharmacy.Id,
-                    MedicineId = medicine.Id,
-                    Price = Random.Shared.Next(5, 100),
-                    StockQuantity = Random.Shared.Next(10, 100),
-                    IsAvailable = true,
-                    ExpirationDate = DateTime.UtcNow.AddMonths(Random.Shared.Next(6, 24)),
-                    CreatedAt = DateTime.UtcNow,
-                    UpdatedAt = DateTime.UtcNow
-                });
-            }
-        }
-
-        context.PharmacyMedicines.AddRange(pharmacyMedicines);
+        
+        context.Medicines.Add(medicine1);
         context.SaveChanges();
     }
 }
+
+app.Run();
