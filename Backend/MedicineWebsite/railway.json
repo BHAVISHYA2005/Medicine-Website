@@ -1,0 +1,10 @@
+{
+  "$schema": "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/railway.json",
+  "build": {
+    "builder": "NIXPACKS"
+  },
+  "deploy": {
+    "startCommand": "dotnet run --project MedicineWebsite.API --urls http://0.0.0.0:$PORT",
+    "healthcheckPath": "/health"
+  }
+}
