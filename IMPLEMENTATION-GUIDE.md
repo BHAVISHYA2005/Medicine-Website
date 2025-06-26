@@ -103,34 +103,178 @@ git commit -m "feat(prescription): integrate electronic prescription system"
 
 ## 📋 Feature Branch Strategy
 
-For each major feature, use this workflow:
+For each major feature, use this workflow with Pull Request (PR) integration:
 
 ```bash
-# Start new feature
+# 1. Start new feature branch from main
+git checkout main
+git pull origin main
 git checkout -b feat/user-authentication
 git commit -m "feat(auth): scaffold authentication module structure"
 
-# Implement core functionality  
+# 2. Implement core functionality with incremental commits
 git commit -m "feat(auth): implement user registration endpoint"
 git commit -m "feat(auth): add password hashing and validation"
 git commit -m "feat(auth): implement JWT token generation"
 
-# Add frontend integration
+# 3. Add frontend integration
 git commit -m "feat(auth): create login/register components"
 git commit -m "feat(auth): implement auth service and guards"
 git commit -m "feat(auth): add user authentication state management"
 
-# Testing and refinement
+# 4. Testing and refinement
 git commit -m "test(auth): add comprehensive authentication tests"
 git commit -m "fix(auth): resolve token expiration handling"
 git commit -m "docs(auth): update API documentation for auth endpoints"
 
-# Merge to main
+# 5. Push feature branch and create Pull Request
+git push origin feat/user-authentication
+
+# 6. Create Pull Request via GitHub/GitLab interface:
+#    - Navigate to your repository on GitHub
+#    - Click "Compare & pull request" for your feature branch
+#    - Fill out PR template with:
+#      * Clear description of changes
+#      * Testing instructions
+#      * Screenshots/demos if applicable
+#      * Link to related issues
+
+# 7. PR Review Process:
+#    - Wait for CI/CD checks to pass (build, tests, linting)
+#    - Request reviews from team members
+#    - Address reviewer feedback with additional commits
+#    - Ensure all conversations are resolved
+
+# 8. Merge via Pull Request (after approval and CI success):
+#    - Use "Squash and merge" for clean history
+#    - Or "Create merge commit" to preserve feature branch history
+#    - Delete feature branch after successful merge
+
+# 9. Clean up local environment
 git checkout main
-git merge feat/user-authentication
-git push origin main
+git pull origin main
 git branch -d feat/user-authentication
 ```
+
+### PR Best Practices:
+
+**Pull Request Template:**
+```markdown
+## Description
+Brief description of changes and motivation
+
+## Type of Change
+- [ ] Bug fix (non-breaking change which fixes an issue)
+- [ ] New feature (non-breaking change which adds functionality)
+- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
+- [ ] Documentation update
+
+## Testing
+- [ ] All existing tests pass
+- [ ] New tests added for new functionality
+- [ ] Manual testing completed
+
+## Checklist
+- [ ] Code follows style guidelines
+- [ ] Self-review completed
+- [ ] Comments added for complex code
+- [ ] Documentation updated
+- [ ] No merge conflicts
+
+## Screenshots/Demos
+Add screenshots or GIFs demonstrating the changes
+```
+
+**CI/CD Checks (should pass before merge):**
+- ✅ Build successful (both frontend and backend)
+- ✅ All tests pass
+- ✅ Code linting/formatting checks
+- ✅ Security vulnerability scans
+- ✅ No merge conflicts with main branch
+
+### GitHub Actions CI/CD Setup
+
+Create `.github/workflows/ci.yml` for automated testing:
+
+```yaml
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  frontend-tests:
+    name: Frontend Build & Test
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: Frontend/medicine-frontend/package-lock.json
+    
+    - name: Install dependencies
+      working-directory: Frontend/medicine-frontend
+      run: npm ci
+    
+    - name: Run tests
+      working-directory: Frontend/medicine-frontend
+      run: npm run test -- --watch=false --browsers=ChromeHeadless
+    
+    - name: Build for production
+      working-directory: Frontend/medicine-frontend
+      run: npm run build
+
+  backend-tests:
+    name: Backend Build & Test
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+    
+    - name: Restore dependencies
+      working-directory: Backend/MedicineWebsite
+      run: dotnet restore
+    
+    - name: Build
+      working-directory: Backend/MedicineWebsite
+      run: dotnet build --no-restore
+    
+    - name: Test
+      working-directory: Backend/MedicineWebsite
+      run: dotnet test --no-build --verbosity normal
+
+  security-scan:
+    name: Security Vulnerability Scan
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Run Trivy vulnerability scanner
+      uses: aquasecurity/trivy-action@master
+      with:
+        scan-type: 'fs'
+        scan-ref: '.'
+```
+
+**Required CI Status Checks:**
+- All tests must pass before PR can be merged
+- Build must be successful for both frontend and backend
+- Security scans must complete without critical vulnerabilities
+- Code coverage should meet minimum threshold (e.g., 80%)
 
 ## 🔧 Code Quality Standards
 
